@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://nodejs.org/static/logos/nodejsLight.svg" width="120" alt="Node logo" />
+  <img src="https://go.dev/blog/go-brand/Go-Logo/PNG/Go-Logo_Blue.png" width="120" alt="Go logo" />
 </p>
 
 # Farms Project
@@ -7,8 +7,7 @@
   API for managing farmers, farms, and harvests.<br>
 </p>
 
-  Built with <a href="https://nodejs.org/"> Node</a> version 22.*<br>
-  [Backend](https://github.com/samuel-prates/farmer-manager-api/blob/master/README.md) - Built with <a href="https://nestjs.com/" target="_blank">NestJS</a> and TypeScript.  <br>
+  Backend - Built with <a href="https://go.dev/" target="_blank">Golang</a>.  <br>
   [Frontend](https://github.com/samuel-prates/farmer-microfrontend/blob/master/README.md) - A microfrontend application built with **React 19**, **TypeScript**, **Redux Toolkit**, **Styled Components** and **Vite**.
 
 ---
