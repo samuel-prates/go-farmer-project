@@ -1,0 +1,36 @@
+services:
+  farms-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:8080"
+    environment:
+      - DATABASE_URL=host=postgres user=postgres password=postgres dbname=farm_db port=5432 sslmode=disable
+      - PORT=8080
+    depends_on:
+      - postgres
+    restart: unless-stopped
+    networks:
+      - backend-network
+
+  postgres:
+    image: postgres:14-alpine
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=farm_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    restart: unless-stopped
+    networks:
+      - backend-network
+
+networks:
+  backend-network:
+    driver: bridge
+
+volumes:
+  postgres-data:
